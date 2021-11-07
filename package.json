@@ -1,0 +1,51 @@
+{
+  "name": "dnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/LLStudent83/DnD.git",
+  "author": "Dmitry Prigulnov <prigulnov@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "test": "jest --testPathPattern=./src/",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "coverage": "jest --testPathPattern=./src/ --coverage",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.5",
+    "mini-css-extract-plugin": "^2.4.2",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "puppeteer": "^10.4.0",
+    "static-files-loader": "^0.1.1",
+    "terser-webpack-plugin": "^5.2.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.18.3"
+  }
+}

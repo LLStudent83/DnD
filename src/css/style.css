@@ -1,0 +1,141 @@
+.board {
+  background-color: #0079bf;
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline-flex;
+  min-width: 740px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.taskColumn {
+  width: 33%;
+  padding: 4px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+}
+
+.taskColumn:not(:first-child) {
+  margin-left: 4px;
+}
+
+.taskColumn__heder {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  font-family: Roboto, sans-serif;
+  padding: 3px 5px;
+}
+.taskColumn__card {
+  overflow: hidden;
+}
+
+.taskColumn__card,
+.taskColumn__newCard {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 3px 5px;
+  min-height: 40px;
+  margin-bottom: 4px;
+}
+
+.taskColumn__cardClose {
+  position: absolute;
+  font-size: 25px;
+  color: #6b778c;
+  right: 3px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #ebecf0;
+}
+
+.taskColumn__cardClose::before {
+  content: "\00D7";
+  position: absolute;
+  top: -4px;
+  left: 3px;
+}
+
+.taskColumn__cardClose:hover {
+  color: black;
+}
+
+.taskColumn__futerAdd {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5e6c84;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.taskColumn__futerAdd:hover {
+  background-color: #dadbe2;
+}
+
+.taskColumn__futerAdd::before {
+  content: "\002B";
+  font-size: 24px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.taskColumn__futerText {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5e6c84;
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 3px 5px;
+  width: 100%;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  resize: none;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  box-shadow: none;
+  max-height: 162px;
+  min-height: 54px;
+}
+
+.taskColumn__futerText:focus {
+  outline: none;
+}
+
+.taskColumn__futerNewCard {
+  background-color: #0079bf;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  width: 140px;
+  height: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.taskColumn__futerClose {
+  width: 32px;
+  height: 32px;
+  color: #6b778c;
+  /* line-height: 32px; */
+  font-size: 34px;
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.taskColumn__futerClose:before {
+  content: "\00D7";
+}
+
+.taskColumn__futerClose:hover {
+  color: black;
+}
