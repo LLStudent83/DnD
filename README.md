@@ -1,6 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/ywy6r09sfhdt97aq?svg=true)](https://ci.appveyor.com/project/LLStudent83/popovers)
+[![Build status](https://ci.appveyor.com/api/projects/status/ywy6r09sfhdt97aq?svg=true)](https://ci.appveyor.com/project/LLStudent83/DnD)
 
-https://llstudent83.github.io/popovers/
+https://llstudent83.github.io/DnD/
 
 
 # Webpack5
