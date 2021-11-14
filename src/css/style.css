@@ -26,6 +26,7 @@
   font-family: Roboto, sans-serif;
   padding: 3px 5px;
 }
+
 .taskColumn__card {
   overflow: hidden;
   cursor: pointer;
