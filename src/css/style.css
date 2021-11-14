@@ -28,6 +28,18 @@
 }
 .taskColumn__card {
   overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.taskColumn__cardText {
+  pointer-events: none;
+}
+
+div.taskColumn__cardDragged {
+  position: absolute;
+  z-index: 999;
+  box-sizing: border-box;
 }
 
 .taskColumn__card,
@@ -37,7 +49,7 @@
   border-radius: 3px;
   padding: 3px 5px;
   min-height: 40px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .taskColumn__cardClose {
@@ -125,7 +137,6 @@
   width: 32px;
   height: 32px;
   color: #6b778c;
-  /* line-height: 32px; */
   font-size: 34px;
   margin-right: 5px;
   vertical-align: middle;
@@ -138,4 +149,10 @@
 
 .taskColumn__futerClose:hover {
   color: black;
+}
+
+.shadowCard {
+  background-color: #c8cad2;
+  border-radius: 3px;
+  margin-bottom: 4px;
 }
