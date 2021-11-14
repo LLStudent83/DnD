@@ -163,14 +163,6 @@ export default class TaskManager {
     return null;
   }
 
-  onMouseleave(e) {
-    // console.log(e.target);
-    // if (this.draggedEl === null
-    //   || !this.draggedEl.classList.contains('taskColumn__card')) return;
-
-    // console.log(e.target);
-  }
-
   showAddCard(e) { // Показывает диалог добавления задачи
     const { target } = e;
     const futerEl = target.parentElement;
