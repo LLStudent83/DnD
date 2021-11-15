@@ -10,13 +10,10 @@ export default class TaskManager {
     this.onClick = this.onClick.bind(this);
     this.showCloseTask = this.showCloseTask.bind(this);
     this.hideCloseTask = this.hideCloseTask.bind(this);
-    this.onMouseleave = this.onMouseleave.bind(this);
+    // this.onMouseleave = this.onMouseleave.bind(this);
     this.onMousedown = this.onMousedown.bind(this);
     this.onMouseup = this.onMouseup.bind(this);
     this.onMousemove = this.onMousemove.bind(this);
-    // document.addEventListener('mousemove', (evt) => this.onMousemove(evt));
-    // document.addEventListener('mousemove', this.onMousemove);
-    // this.container.addEventListener('mouseleave', (e) => this.onMouseleave(e));
     this.init();
   }
 
@@ -126,19 +123,15 @@ export default class TaskManager {
   }
 
   onMouseup(evt) {
-    // this.container.querySelector('.shadowCard').remove();
     // eslint-disable-next-line no-shadow
     document.removeEventListener('mousemove', this.onMousemove);
     evt.target.classList.remove('taskColumn__cardDragged');
-    // const { top, left } = this.container.querySelector('.shadowCard').getBoundingClientRect();
     this.container.querySelector('.shadowCard').replaceWith(this.draggedEl);
     this.draggedEl.style.left = '0px';
     this.draggedEl.style.top = '0px';
     this.draggedEl.style.cursor = 'pointer';
     this.draggedEl = null;
-    // if (!this.draggedEl.classList.contains('taskColumn__card')) return;
-    // evt.preventDefault();
-    // const { target } = evt;
+    SaveStateTable.save(this.container);
   }
 
   createShadowCard() {
