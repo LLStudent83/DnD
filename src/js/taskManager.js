@@ -116,7 +116,7 @@ export default class TaskManager {
     } else if (underCardEl.classList.contains('taskColumn') // если вставляем в колонку где нет карточек
     && !underCardEl.closest('.taskColumn').querySelector('.taskColumn__card')
     && !underCardEl.closest('.taskColumn').querySelector('.shadowCard')) {
-      this.container.querySelector('.shadowCard').remove();
+      if (this.container.querySelector('.shadowCard')) this.container.querySelector('.shadowCard').remove();
       this.createShadowCard();
       underCardEl.closest('.taskColumn').querySelector('.taskColumn__cards').append(this.shadowCard);
     }
